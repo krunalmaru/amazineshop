@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block forms %}
+<div class="card bg-light p-3">
+    <form action="/auth/signup" method="post">
+        {% csrf_token %}
+        <!-- Email input -->
+        <label for="email">Email address</label>
+        <div class="form-group">
+        <input type="email" id="email" name="email" class="form-control" required />
+        </div>
+        <label for="pass1">Password</label>
+        <div class="form-group">
+        <input type="password" id="pass1" name="pass1" class="form-control" required />
+        </div>
+        <label for="email">Confirm Password</label>
+        <div class="form-group">
+        <input type="password" id="pass2" name="pass2" class="form-control" required/>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-danger">Signin</button>
+        
+        <!-- 2 column grid layout for inline styling -->
+    
+        <div class="col">
+            <!-- Simple link -->
+            Already Registered?<a href="{% url 'login' %}">Login</a>
+          </div>
+        <!-- Submit button -->
+    </form>
+</div>
+{% endblock %}
