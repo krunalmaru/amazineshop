@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>{% block title %}{% endblock  %}</title>
+  <title>E-Shoppper {% block title %}{% endblock  %}</title>
   <meta content="ecommerce websites fast products delivered" name="description">
   <meta content="ecommerce" name="flipkart,mesho,amazon">
 
@@ -42,9 +42,9 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">E-Shop</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="{% static 'assets/img/logo.png' %}" alt="" class="img-fluid"></a>-->
+      <a href="/" class="logo"><img src="{% static 'images/logo.png' %}" alt="" class="img-fluid"></a>
+      <!-- <h1 class="logo"><a href="{% url 'home'%}">E-Shopper</a></h1> -->
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -54,7 +54,7 @@
           <li><a class="nav-link scrollto" href="{% url 'aboutus' %}">Cart</a></li>
           <li><a class="nav-link scrollto" href="{% url 'aboutus' %}">My Profile</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="{% url 'signup' %}"><span>Signup</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href=""><span>Profile</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="{% url 'signup' %}">Signin</a></li>
               <li><a href="{% url 'login'%}">Login</a></li>
@@ -72,12 +72,14 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container">
-      <!-- <h3>Welcome to <strong>E-Shop</strong></h3>
-      <h1>We're Creative Agency</h1>
-      <h2>We are team of talented designers making websites with Bootstrap</h2>
-      <a href="#about" class="btn-get-started scrollto">Shop Now</a> -->
+      <!-- <h3>Welcome to <strong>E-Shopping</strong></h3> -->
+      <!-- <h1>We're Creative Agency</h1> -->
+      <!-- <h2>We are team of talented designers making websites with Bootstrap</h2> -->
+      <!-- <a href="#about" class="btn-get-started scrollto">Shop Now</a> -->
+
       {% block content %}{% endblock %}
-      {% block forms %}{% endblock%}
+
+      
     </div>
   </section><!-- End Hero -->
 
