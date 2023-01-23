@@ -1,0 +1,7 @@
+{% autoescape off %}
+
+Hi{{user.username}}
+Please Click The Link below to verify your Account
+http://{{domain}}{% url 'acivate' uid64=uid token=token %}
+
+{% endautoescape %}
